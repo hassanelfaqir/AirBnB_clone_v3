@@ -18,11 +18,10 @@ def downtear(self):
     '''Status of your API'''
     storage.close()
 
-
 @app.errorhandler(404)
 def page_not_found(error):
-    '''return render_template'''
-    return jsonify('error='Not found'), 404
+    '''Return JSON response for 404 errors'''
+    return jsonify({"error": "Not found"}), 404
 
 
 if __name__ == "__main__":
